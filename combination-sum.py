@@ -25,3 +25,19 @@ class Solution:
         self.recurse(candidates, idx, target-candidates[idx], path)
         #backtracking 
         path.pop()
+    '''
+    logic for for loop based backtracking
+    if target < 0 :
+            return
+        if target == 0:
+            self.res.append(path[:])
+
+        #logic
+        for i in range(idx, len(candidates)):
+            #action
+            path.append(candidates[i])
+            #recurse
+            self.recurse(candidates, target-candidates[i], i, path)
+            #remove
+            path.pop()
+    '''
